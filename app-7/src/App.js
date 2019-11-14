@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import NewTask from "./NewTask";
 import "./App.css";
-import List from "./List"
+import NewTask from './NewTask';
+import List from './List';
 
 class App extends Component {
-  constructor() {
+  constructor(){
     super();
 
     this.state = {
@@ -14,20 +14,20 @@ class App extends Component {
     this.handleAddTask = this.handleAddTask.bind(this);
   }
 
-  handleAddTask(task) {
-    this.setState({ list: [...this.state.list, task] });
-  }
+handleAddTask(task){
+  this.setState({list: [...this.state.list, task] });
+}
 
   render() {
     return (
       <div className="App">
-        <h1>My to-do list:</h1>
-        <NewTask add={this.handleAddTask} />
-        <List tasks={this.state.list} />
-        
+        <h1>MY List of Things ToDo</h1>
+        <NewTask add={this.handleAddTask}/>
+        <List tasks={this.state.list}/>
       </div>
     );
   }
 }
 
 export default App;
+

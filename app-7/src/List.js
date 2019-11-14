@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
-import Todo from "./Todo";
+import ToDo from "./ToDo";
 
-export default class List extends Comonent {
+ class List extends Component {
   render() {
     let list = this.props.tasks.map((element, index) => {
-      return <Todo key={index} task={element} />;
+      return <ToDo key={index} task={element} />;
     });
     
     return <div>{list}</div>;
   }
 }
+
+export default List
